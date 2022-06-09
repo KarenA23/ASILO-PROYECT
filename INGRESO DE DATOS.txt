@@ -1,0 +1,143 @@
+	  
+/*==============================================================*/
+/* ASILO                                               */
+/*==============================================================*/
+INSERT INTO ASILO(ID_ASILO, NOMBRE_ASILO, CIUDAD_ASILO, CALLE_ASILO,TELEFONO_ASILO, CANTON_ASILO)
+VALUES (1, 'CASA FE Y ESPERANZA', 'Manta','Calle 13',0968725244,'Manta');
+
+/*==============================================================*/
+/* ANCIANO                                              */
+/*==============================================================*/
+INSERT INTO ANCIANO (ID_ANCIANO, ID_ASILO, NOMBRE_ANCIANO, APELLIDO_ANCIANO, CEDULA_ANCIANO,
+					FECHANACIMIENTO_ANCIANO, GENERO_ANCIANO, ESTADOCIVIL_ANCIANO,
+					TIPO_DE_SANGRE_ANCIANO, FECHA_LLEGADA, CONDICION_SALUD, BOVEDA_PERTENECIENTE)
+ VALUES (1,1,'Roberto Lucas', 'Franco Posligua',1318795854, '1952/05/12','Masculino','Viudo','+O',
+	   '2020/03/28','Estado Estable','Si'),
+	   (2,1,'Maria Luisa', 'Rosado Laz',1315463524, '1957/01/31','Femenino','Viuda','-B',
+	   '2019/06/30','Estado Estable','Si'),
+       (3,1,'Daniel Julio', 'Zambrano Mera',1301371831, '1949/12/10','Masculino','Divorciado','+O',
+	   '2022/10/25','Estado Estable','Si'),
+       (4,1,'Rosa Patricia', 'Rivera Palacios',1303430340, '1950/04/10','Femenino','Casado','+O',
+	   '2021/04/10','Estado Estable','No'),
+       (5,1,'Jorge Pablo', 'Holguin Meza',1303622290, '1951/05/10','Masculino','Divorciado','+O',
+	   '2018/03/28','Estado Estable','No');
+	
+/*==============================================================*/
+/* CANTON                                              */
+/*==============================================================*/
+INSERT INTO CANTON(ID_CANTON, ID_ASILO, NOMBRE_CANTON, DESCRIPCION_CANTON)
+VALUES (4,1,'Manta','Cantón conocido como San Pablo de Manta');  
+
+/*==============================================================*/
+/* FAMILIAR                                            */
+/*==============================================================*/
+INSERT INTO FAMILIAR(ID_FAMILIAR, ID_ANCIANO, NOMBRE_FAMILIAR, APELLIDO_FAMILIAR, CEDULA_FAMILIAR,
+					TELEFONO_FAMILIAR, DIRECCION_FAMILIAR, CORREO_FAMILIAR)
+VALUES (1,1,'Allison Karla', 'Mendoza Sevilla', 1318883230, 0987623527, 'Calle 201 Av. 12',
+	   'karlamen21@gmail.com'),
+	   (2,1,'Marco Polo', 'Rivas Pincay', 1302383834, 0947888389, 'Av. Circunvalación calle 20', 
+	   'rivasrodri1@hotmail.com'),
+	   (3,2,'Andrea Linda', 'Figueroa Verde', 1317778380, 0983642738, 'Av. 4 de Noviembre',
+	   'andreachi92@hotmail.com'),
+	   (4,3,'Marisol Rosario', 'Torres Mendieta', 1472666261, 0987777301, 'Calle 121 Av. 105',
+	   'marisolr21@hotmail.com'),
+	   (5,4,'Nicolas Junior', 'Villacreces Laza', 1746362271, 0968723433, 'Calle 13 Av. 21 y 22',
+	   'jurnicolas231@hotmail.com'),
+	   (6,5,'Karla Zain', 'Zamora Villa', 2488882731, 0999978471, '8 de Abril Av. Circunvalación',
+	   'karlitame26@hotmail.com');
+		  
+/*==============================================================*/
+/* PERSONAL ADMINISTRATIVO                                      */
+/*==============================================================*/
+INSERT INTO PERSONAL_ADMINISTRATIVO(ID_PERSONAL_ADM, ID_ASILO, NOMBRE_PERSONAL_ADM,
+									APELLIDO_PERSONAL_ADM, CEDULA_PERSONAL_ADM, TELEFONO_PERSONAL_ADM, 
+									CARGO_PERSONAL_ADM, ENTRADA_PERSONAL_ADM, CORREO_PERSONAL_ADM)							   
+VALUES (1,1, 'Lucia Paola', 'Fuentes Nevarez', 1276445690, 0983747722, 'Administrador Principal',
+	   '2018/02/20', 'luciafun32@hotmail.com'), 
+	   (2,1, 'Mary Roseta', 'Palacios Delgado', 1297721920, 0977676726, 'Administrador Principal',
+	   '2019/06/23', 'palaciros32@hotmail.com'),
+	   (3,1, 'Marilo Alex', 'Soza Luz', 1146309383, 0977334340, 'Administrador Secundario',
+	   '2019/01/18', 'marilosoza2@hotmail.com'),
+	   (4,1, 'Maria Luisa', 'Ponce Roza', 1316664634, 0989898923, 'Administrador Secundario',
+	   '2018/02/18', 'mariaroz2@hotmail.com');
+	
+
+/*==============================================================*/
+/* CERTIFICADO                                                  */
+/*==============================================================*/
+INSERT INTO CERTIFICADO(ID_CERTIFICADO, ID_ASILO, ID_ANCIANO, FECHASOLICITADA_CERTIFICADO,
+					   FECHAEMITIDA_CERTIFICADO, DESCRIPCION_CERTIFICADO)							   
+VALUES (1,1,1,'2021/04/30', '2021/04/30','Solicitud de salida, motivo de paseo familiar'),
+       (2,1,2,'2019/07/31','2019/08/01','Solicitud de salida, motivo de paseo familiar'),
+	   (3,1,2,'2019/08/12','2018/08/13','Solicitud de salida, motivo de cita médica'),
+	   (4,1,3,'2022/11/10','2018/11/11','Solicitud de salida, motivo de cita médica');
+
+		  
+/*==============================================================*/
+/* PERSONAL DE SALUD                                            */
+/*==============================================================*/
+INSERT INTO PERSONAL_SALUD(ID_PERSONAL_SALUD, ID_ASILO, NOMBRE_PERSONAL_SALUD,
+						   APELLIDO_PERSONAL_SALUD, CEDULA_PERSONAL_SALUD, 
+						   TELEFONO_PERSONAL_SALUD, ESPECIALIDAD_PERSONAL_SALUD, 
+						   ENTRADA_PERSONAL_SALUD, CORREO_PERSONAL_SALUD)							   
+VALUES (1,1, 'Maricela Lisbet', 'Lirios Roja', 1737337370, 0987772324, 'Geriatra',
+	   '2018/03/23', 'maricelaroja21@hotmail.com'), 
+	   (2,1, 'Julio Benael', 'Sanchez Montes', 1057564738, 0956464351, 'Cardiología',
+	   '2018/03/15', 'benaeljulio2@hotmail.com'),
+	   (3,1, 'Martina Luz', 'Marcillo Campos', 1317773544, 0956566561, 'Fisiatría',
+	   '2019/04/25', 'martinmarci01@hotmail.com'),
+	   (4,1, 'Liliana Karla', 'García Cruz', 1045353252, 0956743433, 'Traumatología',
+	   '2020/08/15', 'karlagarcia87@hotmail.com'),
+	   (5,1, 'Isaac Julio', 'Santana Calle', 1316663231, 0936363545, 'Dermatología',
+	   '2021/04/25', 'santanaisaac22@hotmail.com');
+	   
+/*==============================================================*/
+/* CONSULTA MEDICA                                              */
+/*==============================================================*/
+INSERT INTO CONSULTA_MEDICA(ID_CONSULTA, ID_PERSONAL_SALUD, ID_ANCIANO,
+						   DESCRIPCION_CONSULTA, ENTRADA_CONSULTA, SALIDA_CONSULTA)							   
+VALUES (1,1,5, 'Paciente con dolor de rodilla', '2018/11/30 13:00:00.59', '2018/11/30 13:30:00.59'),
+       (2,1,5, 'Paciente mejorado, seguir con la medicacion', '2018/12/02 13:00:00.59', '2018/12/02 13:30:00.59'),
+	   (3,1,5, 'Paciente en estado saludable, recuperado', '2018/12/05 13:00:00.59', '2018/12/05 13:30:00.59'),
+	   (4,4,1, 'Paciente con daño estomacal', '2020/09/02 13:00:00.59', '2020/09/02 13:30:00.59'),
+	   (5,4,2, 'Paciente con dolor de cabeza leve', '2020/12/02 13:00:00.59', '2020/12/02 13:30:00.59');
+	   
+
+/*==============================================================*/
+/* INCIDENTE                                                    */
+/*==============================================================*/
+INSERT INTO INCIDENTE(ID_INCIDENTE, ID_ASILO, ID_ANCIANO, FECHA_INCIDENTE, HORA_INCIDENTE, DESCRIPCION_INCIDENTE)
+VALUES (1,1,4, '2021/05/11', '13:20:55','Mientras caminaba por el pasillo, el anciano se resbaló'),
+       (2,1,3, '2022/11/05', '15:30:20','El anciano se encontraba jugando, en este instante tuvo una lesión en 
+		el tobillo'),
+	   (3,1,3, '2020/09/12', '18:10:20','El anciano mientras jugaba, sufrió una lesión en la rodilla derecha');
+
+/*==============================================================*/
+/* SERVICIO                                                     */
+/*==============================================================*/
+
+INSERT INTO SERVICIO(ID_SERVICIO, ID_ANCIANO, ID_ASILO, ID_TIPOSERVICIO, NOMBRE_SERVICIO,
+					 DESCRIPCION_SERVICIO, COSTO_SERVICIO, FRECUENCIASEMANAL_SERVICIO)
+VALUES (1,1,1,1, 'Peluquería y Spas', 'Servicio brindado cada dos días en la semana',100,'Mediana'),
+       (2,2,1,1, 'Paseo,Belleza y Spas,Actividad', 'Servicio disponible diariamente',200,'Bajo'),
+	   (3,3,1,1, 'Actividades recreativas', 'Actividades recreativas diariamente',50,'Alto'),
+       (4,4,1,1, 'Actividades recreativas', 'Actividades recreativas diariamente',50,'Alto'),
+       (5,5,1,1, 'Actividades recreativas', 'Actividades recreativas diariamente',50,'Alto');
+/*==============================================================*/
+/* TIPO SERVICIO                                                */
+/*==============================================================*/
+INSERT INTO TIPO_SERVICIO(ID_TIPOSERVICIO, BASICO_TIPOSERVICIO, MEDIO_TIPOSERVICIO, AVANZADO_TIPOSERVICIO)
+VALUES (1,'SERVICIO BASICO','SERVICIO ESTANDAR', 'SERVICIO PREMIUM');
+
+
+/*==============================================================*/
+/* PAGO                                                         */
+/*==============================================================*/
+INSERT INTO PAGO(ID_PAGO, ID_ANCIANO, ID_FAMILIAR, FECHA_PAGO, VALOR_PAGO, PAGO_TARJETA, PAGO_EFECTIVO,
+				FUENTE_PAGO)
+VALUES (1,1,1, '2020/05/10', 300, 'No efectuado', 'Pagado por efectivo','Pagado por el familiar'),
+       (2,2,3, '2020/12/10', 100, 'No efectuado', 'Pagado por efectivo','Pagado por el familiar'),
+       (3,2,3, '2020/12/10', 200, 'No efectuado', 'Pagado por efectivo','Pagado por el familiar'),
+	   (4,3,4, '2021/10/12', 200, 'No efectuado', 'Pagado por efectivo','Pagado por el familiar'),
+	   (5,4,5, '2021/06/15', 100, 'Pagado por tarjeta', 'No efectuado','Pagado por fuente propia');
+    
